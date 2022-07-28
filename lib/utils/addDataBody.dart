@@ -32,6 +32,17 @@ class addDataBody extends StatelessWidget {
         key: dataKey,
         child: ListView(
           children: [
+            SizedBox(
+              height: 30,
+            ),
+            Image.asset(
+              "assets/images/addDataImage.png",
+              height: 170,
+              width: 170,
+            ),
+            SizedBox(
+              height: 30,
+            ),
             Card(
               child: TextFormField(
                 validator: (value) {
@@ -166,37 +177,49 @@ class addDataBody extends StatelessWidget {
               height: 20,
             ),
             ElevatedButton(
-                onPressed: () {
-                  dataKey.currentState!.validate() == false
-                      ? (ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text('Data not Saved!')),
-                        ))
-                      : dataManager().writeData(
-                          title_data: title,
-                          id_data: id,
-                          name_data: name,
-                          number_data: number,
-                          cvv_data: cvv,
-                          address_data: address,
-                          zip_data: zip,
-                          phone_data: phone);
-                  dataKey.currentState!.validate() == false
-                      ? (ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text('Data not Saved!')),
-                        ))
-                      : (ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                          content: Container(
-                              decoration: BoxDecoration(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(20))),
-                              child: Text("Data Saved!")),
-                          behavior: SnackBarBehavior.floating,
-                          elevation: 0.0,
-                          backgroundColor: Colors.black,
-                        )));
-                  dataField.clearDataField();
-                },
-                child: Text("ADD DOCUMENT"))
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.cyan,
+                  foregroundColor: Colors.white,
+                  elevation: 0.0,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30)),
+                  padding: EdgeInsets.all(20),
+                  textStyle:
+                      TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+              onPressed: () {
+                dataKey.currentState!.validate() == false
+                    ? (ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text('Data not Saved!')),
+                      ))
+                    : dataManager().writeData(
+                        title_data: title,
+                        id_data: id,
+                        name_data: name,
+                        number_data: number,
+                        cvv_data: cvv,
+                        address_data: address,
+                        zip_data: zip,
+                        phone_data: phone);
+                dataKey.currentState!.validate() == false
+                    ? (ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text('Data not Saved!')),
+                      ))
+                    : (ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        content: Container(
+                            decoration: BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20))),
+                            child: Text("Data Saved!")),
+                        behavior: SnackBarBehavior.floating,
+                        elevation: 0.0,
+                      )));
+                dataField.clearDataField();
+              },
+              child: Text("ADD DOCUMENT"),
+            ),
+            SizedBox(
+              height: 30,
+            ),
           ],
         ),
       )),

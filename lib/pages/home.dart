@@ -28,6 +28,8 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text("Your Docs"),
           elevation: 0.0,
           centerTitle: true,
+          backgroundColor: Colors.white,
+          foregroundColor: Colors.black,
         ),
         body: (data_list.isNotEmpty)
             ? ListView.builder(

@@ -15,13 +15,33 @@ class dataDetails extends StatelessWidget {
         title: Text(data.title + " - " + data.id),
         elevation: 0.0,
         centerTitle: true,
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
       ),
       body: Card(
         child: Column(
           children: [
+            Column(
+              children: [
+                SizedBox(
+                  height: 30,
+                ),
+                Image.asset(
+                  "assets/images/homeImage.png",
+                  height: 150,
+                  width: 150,
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+              ],
+            ),
             (data.name != "")
                 ? ListTile(
-                    leading: Text("Name on Document: "),
+                    leading: Text(
+                      "Name on Document: ",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
                     title: Text(data.name),
                   )
                 : SizedBox(
@@ -29,7 +49,10 @@ class dataDetails extends StatelessWidget {
                   ),
             (data.number != 0)
                 ? ListTile(
-                    leading: Text("Document Number: "),
+                    leading: Text(
+                      "Document Number: ",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
                     title: Text(data.number.toString()),
                   )
                 : SizedBox(
@@ -37,7 +60,10 @@ class dataDetails extends StatelessWidget {
                   ),
             (data.cvv != 0)
                 ? ListTile(
-                    leading: Text("CVV: "),
+                    leading: Text(
+                      "CVV: ",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
                     title: Text(data.cvv.toString()),
                   )
                 : SizedBox(
@@ -45,7 +71,10 @@ class dataDetails extends StatelessWidget {
                   ),
             (data.address != "")
                 ? ListTile(
-                    leading: Text("Address on Document: "),
+                    leading: Text(
+                      "Address on Document: ",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
                     title: Text(data.address),
                   )
                 : SizedBox(
@@ -53,7 +82,10 @@ class dataDetails extends StatelessWidget {
                   ),
             (data.zip != 0)
                 ? ListTile(
-                    leading: Text("ZIP: "),
+                    leading: Text(
+                      "ZIP: ",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
                     title: Text(data.zip.toString()),
                   )
                 : SizedBox(
@@ -61,7 +93,10 @@ class dataDetails extends StatelessWidget {
                   ),
             (data.phone != 0)
                 ? ListTile(
-                    leading: Text("Phone No. : "),
+                    leading: Text(
+                      "Phone No. : ",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
                     title: Text(data.phone.toString()),
                   )
                 : SizedBox(

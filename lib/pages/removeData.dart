@@ -29,9 +29,11 @@ class _removeDataState extends State<removeData> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Remove existing Data"),
+          title: Text("Remove existing Doc"),
           elevation: 0.0,
           centerTitle: true,
+          backgroundColor: Colors.white,
+          foregroundColor: Colors.black,
         ),
         body: (data_list.isEmpty)
             ? Center(
@@ -42,6 +44,17 @@ class _removeDataState extends State<removeData> {
                     key: keyToRemove,
                     child: ListView(
                       children: [
+                        SizedBox(
+                          height: 30,
+                        ),
+                        Image.asset(
+                          "assets/images/removeDataImage.png",
+                          height: 200,
+                          width: 200,
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
                         Card(
                           child: TextFormField(
                             validator: ((value) {
@@ -61,7 +74,19 @@ class _removeDataState extends State<removeData> {
                                 labelText: "Enter a ID to remove"),
                           ),
                         ),
+                        SizedBox(
+                          height: 30,
+                        ),
                         ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.cyan,
+                                foregroundColor: Colors.white,
+                                elevation: 0.0,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30)),
+                                padding: EdgeInsets.all(20),
+                                textStyle: TextStyle(
+                                    fontSize: 20, fontWeight: FontWeight.bold)),
                             onPressed: () {
                               keyToRemove.currentState!.validate() == false
                                   ? (ScaffoldMessenger.of(context).showSnackBar(

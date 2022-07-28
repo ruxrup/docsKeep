@@ -21,9 +21,14 @@ class _myDrawerState extends State<myDrawer> {
         DrawerHeader(
             padding: EdgeInsets.zero,
             child: UserAccountsDrawerHeader(
-              accountName: Text("user"),
-              accountEmail: Text("useraccount"),
-              currentAccountPicture: Icon(Icons.person),
+              margin: EdgeInsets.only(
+                top: 0.0,
+                bottom: 0.0,
+              ),
+              accountName: Text("Developed by:"),
+              accountEmail: Text("@ruxrup"),
+              currentAccountPicture:
+                  Image.asset("assets/images/introImage.png"),
               currentAccountPictureSize: const Size.square(50),
             )),
         Column(

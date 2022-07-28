@@ -1,4 +1,0 @@
-{"title":"Aadhaar","name":"Daksh Srivastava","number":12343414123,"cvv":211,"address":"Indira Nagar","zip":223,"phone":99832348423,"id":"1"}
-{"title":"aaddasf","name":"","number":0,"cvv":0,"address":"","zip":0,"phone":0,"id":"2"}
-{"title":"sdvsdvs","name":"Dakjsh","number":0,"cvv":0,"address":"","zip":0,"phone":2324354,"id":"3"}
-{"title":"111","name":"11","number":1,"cvv":11,"address":"111","zip":11,"phone":11,"id":"111"}

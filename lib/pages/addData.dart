@@ -14,9 +14,11 @@ class _addDataState extends State<addData> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Add new Data"),
+          title: Text("Add new Doc"),
           elevation: 0.0,
           centerTitle: true,
+          backgroundColor: Colors.white,
+          foregroundColor: Colors.black,
         ),
         body: addDataBody(),
         drawer: myDrawer());
