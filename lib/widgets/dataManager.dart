@@ -30,15 +30,18 @@ class dataManager {
     address_data = "",
     zip_data = 0,
     phone_data = 0,
+    required id_data,
   }) async {
     dataClass dataToWrite = dataClass(
-        title: title_data,
-        name: name_data,
-        cvv: cvv_data,
-        address: address_data,
-        zip: zip_data,
-        phone: phone_data,
-        number: number_data);
+      title: title_data,
+      name: name_data,
+      cvv: cvv_data,
+      address: address_data,
+      zip: zip_data,
+      phone: phone_data,
+      number: number_data,
+      id: id_data,
+    );
     await data.writeAsString(json.encode(dataToWrite) + "\n",
         mode: FileMode.append);
   }

@@ -6,6 +6,7 @@ class dataClass {
   String address;
   int zip;
   int phone;
+  var id;
 
   dataClass({
     required this.title,
@@ -15,6 +16,7 @@ class dataClass {
     this.address = "",
     this.zip = 0,
     this.phone = 0,
+    this.id = "",
   });
 
   factory dataClass.fromJson(Map<String, dynamic> json) {
@@ -24,7 +26,8 @@ class dataClass {
         cvv: json["cvv"],
         address: json["address"],
         zip: json["zip"],
-        phone: json["phone"]);
+        phone: json["phone"],
+        id: json["id"]);
   }
 
   Map<String, dynamic> toJson() => {
@@ -35,6 +38,7 @@ class dataClass {
         "address": address,
         "zip": zip,
         "phone": phone,
+        "id": id,
       };
 
   static parse(decode) {}

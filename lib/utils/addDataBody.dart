@@ -25,6 +25,7 @@ class addDataBody extends StatelessWidget {
   String address = "";
   int zip = 0;
   int phone = 0;
+  var id = "";
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +39,7 @@ class addDataBody extends StatelessWidget {
               child: TextFormField(
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return ("Title is Required!");
+                    return ("Title is Mandatory!");
                   } else {
                     return null;
                   }
@@ -50,6 +51,24 @@ class addDataBody extends StatelessWidget {
                 decoration: InputDecoration(
                     hintText: "Title",
                     labelText: "Enter a Title for your Document"),
+              ),
+            ),
+            Card(
+              child: TextFormField(
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return ("Document ID is Mandatory!");
+                  } else {
+                    return null;
+                  }
+                },
+                controller: dataField.id_dataField,
+                onChanged: (value) {
+                  id = value;
+                },
+                decoration: InputDecoration(
+                    hintText: "Document ID",
+                    labelText: "Enter a ID for your Document"),
               ),
             ),
             Card(
@@ -66,7 +85,7 @@ class addDataBody extends StatelessWidget {
             Card(
               child: TextFormField(
                 validator: (value) {
-                  if (!numCheck(value)) {
+                  if (!numCheck(value) && value!.isNotEmpty) {
                     return ("Enter a valid Number");
                   } else {
                     return null;
@@ -84,7 +103,7 @@ class addDataBody extends StatelessWidget {
             Card(
               child: TextFormField(
                 validator: (value) {
-                  if (!numCheck(value)) {
+                  if (!numCheck(value) && value!.isNotEmpty) {
                     return ("Enter a valid Number");
                   } else {
                     return null;
@@ -113,7 +132,7 @@ class addDataBody extends StatelessWidget {
             Card(
               child: TextFormField(
                 validator: (value) {
-                  if (!numCheck(value)) {
+                  if (!numCheck(value) && value!.isNotEmpty) {
                     return ("Enter a valid Number");
                   } else {
                     return null;
@@ -130,7 +149,7 @@ class addDataBody extends StatelessWidget {
             Card(
               child: TextFormField(
                 validator: (value) {
-                  if (!numCheck(value)) {
+                  if (!numCheck(value) && value!.isNotEmpty) {
                     return ("Enter a valid Number");
                   } else {
                     return null;
@@ -156,6 +175,7 @@ class addDataBody extends StatelessWidget {
                         ))
                       : dataManager().writeData(
                           title_data: title,
+                          id_data: id,
                           name_data: name,
                           number_data: number,
                           cvv_data: cvv,

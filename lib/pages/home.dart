@@ -4,7 +4,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'dart:ui';
-
 import '../models/dataClass.dart';
 import '../widgets/data_widgets.dart';
 import '../widgets/dataManager.dart';
@@ -34,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
           elevation: 0.0,
           centerTitle: true,
         ),
-        body: (data_list.isNotEmpty && data_list != null)
+        body: (data_list.isNotEmpty)
             ? ListView.builder(
                 itemCount: data_list.length,
                 itemBuilder: ((context, index) {

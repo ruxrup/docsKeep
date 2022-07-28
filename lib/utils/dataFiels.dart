@@ -8,6 +8,7 @@ class createDataField {
   final address_dataField = TextEditingController();
   final zip_dataField = TextEditingController();
   final phone_dataField = TextEditingController();
+  final id_dataField = TextEditingController();
 
   void clearDataField() {
     title_dataField.clear();
@@ -17,5 +18,6 @@ class createDataField {
     address_dataField.clear();
     zip_dataField.clear();
     phone_dataField.clear();
+    id_dataField.clear();
   }
 }

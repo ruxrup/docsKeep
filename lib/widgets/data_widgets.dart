@@ -12,8 +12,10 @@ class dataWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
         child: ListTile(
-            title: Text(
-      data_to_show.title,
-    )));
+      title: Text(
+        data_to_show.title,
+      ),
+      trailing: Text(data_to_show.id),
+    ));
   }
 }
