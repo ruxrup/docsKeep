@@ -2,10 +2,6 @@ import 'package:docs_keep/utils/dataFiels.dart';
 import 'package:docs_keep/utils/removeID.dart';
 import 'package:docs_keep/widgets/dataManager.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import '../widgets/drawer.dart';
-import '../widgets/data_widgets.dart';
 
 class addDataBody extends StatelessWidget {
   bool numCheck(var str) {

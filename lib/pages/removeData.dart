@@ -1,7 +1,5 @@
 import 'package:docs_keep/utils/removeID.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import '../models/dataClass.dart';
 import '../widgets/dataManager.dart';
 import '../widgets/drawer.dart';

@@ -1,9 +1,5 @@
-import 'dart:io';
 import 'package:docs_keep/widgets/drawer.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
-import 'dart:convert';
-import 'dart:ui';
 import '../models/dataClass.dart';
 import '../widgets/data_widgets.dart';
 import '../widgets/dataManager.dart';
