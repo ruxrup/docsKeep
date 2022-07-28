@@ -35,10 +35,8 @@ class _myDrawerState extends State<myDrawer> {
             ListTile(
               leading: Icon(Icons.home),
               title: Text("Home"),
-              onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => MyHomePage(title: "goto home"))),
+              onTap: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => MyHomePage())),
             ),
             ListTile(
               leading: Icon(Icons.data_saver_on_rounded),

@@ -1,22 +1,29 @@
+import 'dart:io';
 import 'package:docs_keep/widgets/drawer.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
+import 'dart:convert';
+import 'dart:ui';
+
+import '../models/dataClass.dart';
+import '../widgets/data_widgets.dart';
+import '../widgets/dataManager.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-  final String title;
-
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-  bool noDoc = true;
+  @override
+  void initState() {
+    super.initState();
+    loadData();
+  }
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+  loadData() async {
+    data_list = await dataManager().readData();
+    setState(() {});
   }
 
   @override
@@ -27,18 +34,15 @@ class _MyHomePageState extends State<MyHomePage> {
           elevation: 0.0,
           centerTitle: true,
         ),
-        body: noDoc
-            ? Center(
-                child: Text("No data available"),
-              )
+        body: (data_list.isNotEmpty && data_list != null)
+            ? ListView.builder(
+                itemCount: data_list.length,
+                itemBuilder: ((context, index) {
+                  return dataWidget(data_to_show: data_list[index]);
+                }))
             : Center(
-                child: ListView(
-                children: [
-                  Card(
-                    child: Text("hello world"),
-                  )
-                ],
-              )),
+                child: Text("NO DATA AVAILABLE!"),
+              ),
         drawer: myDrawer());
   }
 }

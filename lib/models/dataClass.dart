@@ -36,4 +36,8 @@ class dataClass {
         "zip": zip,
         "phone": phone,
       };
+
+  static parse(decode) {}
 }
+
+List<dynamic> data_list = [];

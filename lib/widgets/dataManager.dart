@@ -7,8 +7,19 @@ class dataManager {
   File data = File("assets/data/data.txt");
 
   readData() async {
-    String fileContents = await data.readAsString();
-    return json.decode(fileContents);
+    List fileContents_list = await data.readAsLines();
+    List fileContents_list_decode =
+        new List.filled(fileContents_list.length, 0, growable: true);
+    String values;
+    int c = 0;
+    for (values in fileContents_list) {
+      fileContents_list_decode[c] = json.decode(values);
+      c += 1;
+    }
+    List fileContents = List.from(fileContents_list_decode)
+        .map<dataClass>((object) => dataClass.fromJson(object))
+        .toList();
+    return fileContents;
   }
 
   writeData({
