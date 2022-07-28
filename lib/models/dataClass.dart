@@ -1,6 +1,6 @@
 class dataClass {
   String title;
-  String name = "";
+  String name;
   int number;
   int cvv;
   String address;
@@ -22,6 +22,7 @@ class dataClass {
   factory dataClass.fromJson(Map<String, dynamic> json) {
     return dataClass(
         title: json["title"],
+        name: json["name"],
         number: json["number"],
         cvv: json["cvv"],
         address: json["address"],

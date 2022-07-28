@@ -1,4 +1,5 @@
 import 'package:docs_keep/utils/dataFiels.dart';
+import 'package:docs_keep/utils/removeID.dart';
 import 'package:docs_keep/widgets/dataManager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -56,8 +57,9 @@ class addDataBody extends StatelessWidget {
             Card(
               child: TextFormField(
                 validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return ("Document ID is Mandatory!");
+                  if ((value == null || value.isEmpty) ||
+                      (removeID(value).check_id())) {
+                    return ("Enter a valid & unique Data ID!");
                   } else {
                     return null;
                   }

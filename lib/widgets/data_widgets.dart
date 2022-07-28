@@ -1,4 +1,5 @@
 import 'package:docs_keep/models/dataClass.dart';
+import 'package:docs_keep/pages/dataDetails.dart';
 import 'package:docs_keep/utils/dataFiels.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -16,6 +17,8 @@ class dataWidget extends StatelessWidget {
         data_to_show.title,
       ),
       trailing: Text(data_to_show.id),
+      onTap: () => Navigator.push(context,
+          MaterialPageRoute(builder: (context) => dataDetails(data_to_show))),
     ));
   }
 }
