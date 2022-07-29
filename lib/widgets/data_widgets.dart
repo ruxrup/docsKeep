@@ -1,5 +1,6 @@
-import 'package:docs_keep/models/dataClass.dart';
-import 'package:docs_keep/pages/dataDetails.dart';
+
+import 'package:DocsKeep/models/dataClass.dart';
+import 'package:DocsKeep/pages/dataDetails.dart';
 import 'package:flutter/material.dart';
 
 class dataWidget extends StatelessWidget {

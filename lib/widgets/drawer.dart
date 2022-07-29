@@ -1,6 +1,6 @@
 import 'dart:io';
-import 'package:docs_keep/pages/addData.dart';
-import 'package:docs_keep/pages/home.dart';
+import 'package:DocsKeep/pages/addData.dart';
+import 'package:DocsKeep/pages/home.dart';
 import 'package:flutter/material.dart';
 
 import '../pages/removeData.dart';

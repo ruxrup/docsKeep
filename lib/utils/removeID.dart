@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:docs_keep/utils/locationGetter.dart';
+import 'package:DocsKeep/utils/locationGetter.dart';
 
 import '../models/dataClass.dart';
 import '../widgets/dataManager.dart';

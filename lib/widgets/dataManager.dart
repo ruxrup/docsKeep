@@ -1,9 +1,10 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:docs_keep/models/dataClass.dart';
-import 'package:docs_keep/utils/locationGetter.dart';
-import 'package:docs_keep/utils/removeID.dart';
+import 'package:DocsKeep/models/dataClass.dart';
+
+import '../utils/locationGetter.dart';
+
 
 class dataManager {
   readData() async {

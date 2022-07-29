@@ -1,5 +1,6 @@
-import 'package:docs_keep/models/dataClass.dart';
-import 'package:docs_keep/widgets/drawer.dart';
+
+import 'package:DocsKeep/models/dataClass.dart';
+import 'package:DocsKeep/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 
 class dataDetails extends StatelessWidget {
