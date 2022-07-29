@@ -1,4 +1,3 @@
-
 import 'package:DocsKeep/utils/removeID.dart';
 import 'package:flutter/material.dart';
 import '../models/dataClass.dart';
@@ -30,7 +29,7 @@ class _removeDataState extends State<removeData> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Remove existing Doc"),
+          title: Text("Remove existing documents"),
           elevation: 0.0,
           centerTitle: true,
           backgroundColor: Colors.white,
@@ -38,7 +37,7 @@ class _removeDataState extends State<removeData> {
         ),
         body: (data_list.isEmpty)
             ? Center(
-                child: Text("NO DATA AVAILABLE TO REMOVE!"),
+                child: Text("No documents are available to remove."),
               )
             : Center(
                 child: Form(

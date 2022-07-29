@@ -19,17 +19,19 @@ class _myDrawerState extends State<myDrawer> {
         child: ListView(
       children: [
         DrawerHeader(
+            curve: Curves.fastOutSlowIn,
             padding: EdgeInsets.zero,
             child: UserAccountsDrawerHeader(
               margin: EdgeInsets.only(
                 top: 0.0,
                 bottom: 0.0,
               ),
-              accountName: Text("Developed by:"),
-              accountEmail: Text("@ruxrup"),
-              currentAccountPicture:
-                  Image.asset("assets/images/introImage.png"),
-              currentAccountPictureSize: const Size.square(50),
+              accountName: Text("  DocsKeep"),
+              accountEmail: Text("  @ruxrup"),
+              currentAccountPicture: Image.asset(
+                "assets/images/introImage.png",
+              ),
+              currentAccountPictureSize: const Size.fromRadius(35),
             )),
         Column(
           children: [

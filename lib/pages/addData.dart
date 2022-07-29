@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import '../utils/addDataBody.dart';
 import '../widgets/drawer.dart';
@@ -15,7 +14,7 @@ class _addDataState extends State<addData> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Add new Doc"),
+          title: Text("Create a new document"),
           elevation: 0.0,
           centerTitle: true,
           backgroundColor: Colors.white,

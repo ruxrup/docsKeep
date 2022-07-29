@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import '../models/dataClass.dart';
 import '../widgets/data_widgets.dart';
@@ -39,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   return dataWidget(data_to_show: data_list[index]);
                 }))
             : Center(
-                child: Text("NO DATA AVAILABLE!"),
+                child: Text("Add documents by opening the drawer."),
               ),
         drawer: myDrawer());
   }

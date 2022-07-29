@@ -1,6 +1,6 @@
-
 import 'package:DocsKeep/pages/home.dart';
 import 'package:flutter/material.dart';
+import 'package:splashscreen/splashscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,25 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'DocsKeep',
-      home: MyHomePage(),
+      home: SplashScreen(
+          title: Text(
+            "DocsKeep",
+            style: TextStyle(
+              fontSize: 30,
+            ),
+          ),
+          loadingText: Text(
+            "Please wait while we organise your documents",
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          styleTextUnderTheLoader:
+              const TextStyle(fontWeight: FontWeight.bold, color: Colors.cyan),
+          photoSize: 80,
+          image: Image.asset(
+            "assets/images/introImage.png",
+          ),
+          seconds: 3,
+          navigateAfterSeconds: MyHomePage()),
       themeMode: ThemeMode.light,
       theme: ThemeData(
           fontFamily: "Raleway",
