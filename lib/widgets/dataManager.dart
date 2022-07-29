@@ -2,11 +2,12 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:docs_keep/models/dataClass.dart';
+import 'package:docs_keep/utils/locationGetter.dart';
+import 'package:docs_keep/utils/removeID.dart';
 
 class dataManager {
-  File data = File("assets/data/data.txt");
-
   readData() async {
+    File data = await localFile;
     List fileContents_list = await data.readAsLines();
     List fileContents_list_decode =
         new List.filled(fileContents_list.length, 0, growable: true);
@@ -42,6 +43,7 @@ class dataManager {
       number: number_data,
       id: id_data,
     );
+    File data = await localFile;
     await data.writeAsString(json.encode(dataToWrite) + "\n",
         mode: FileMode.append);
   }

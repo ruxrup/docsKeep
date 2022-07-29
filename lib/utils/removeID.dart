@@ -1,6 +1,8 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:docs_keep/utils/locationGetter.dart';
+
 import '../models/dataClass.dart';
 import '../widgets/dataManager.dart';
 
@@ -13,10 +15,10 @@ class removeID {
   removeID(id_to_remove) {
     id = id_to_remove;
   }
-  remove() {
+  remove() async {
     dataClass element;
     data_list.removeWhere((element) => element.id == id);
-    File _updated_file = File("assets/data/data.txt");
+    File _updated_file = await localFile;
     _updated_file.delete();
     createnew();
   }
@@ -35,7 +37,7 @@ class removeID {
 
 createnew() async {
   dataClass element;
-  File updated_file = File("assets/data/data.txt");
+  File updated_file = await localFile;
   updated_file.create();
   for (element in data_list) {
     await updated_file.writeAsString(json.encode(element) + "\n",
